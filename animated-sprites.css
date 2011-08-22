@@ -1,0 +1,122 @@
+.loadingBar {
+	-webkit-animation: loadingBar 1s infinite;
+	-moz-animation: loadingBar 1s infinite;
+	background: #000 url(loadingBar.png) no-repeat center top;
+	border-radius: 3px;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+	height: 11px;
+	margin: 3em auto 0 auto;
+	width: 92px;
+}
+
+@-webkit-keyframes loadingBar {
+	0%, 5% { background-position: center top; }
+	5.0001%, 10% { background-position: center -11px; }
+	10.0001%, 15% { background-position: center -22px; }
+	15.0001%, 20% { background-position: center -33px; }
+	20.0001%, 25% { background-position: center -44px; }
+	25.0001%, 30% { background-position: center -55px; }
+	30.0001%, 35% { background-position: center -66px; }
+	35.0001%, 40% { background-position: center -77px; }
+	40.0001%, 45% { background-position: center -88px; }
+	45.0001%, 50% { background-position: center -99px; }
+	50.0001%, 55% { background-position: center -110px; }
+	55.0001%, 60% { background-position: center -121px; }
+	60.0001%, 65% { background-position: center -132px; }
+	65.0001%, 70% { background-position: center -143px; }
+	70.0001%, 75% { background-position: center -154px; }
+	75.0001%, 80% { background-position: center -165px; }
+	80.0001%, 85% { background-position: center -176px; }
+	85.0001%, 90% { background-position: center -187px; }
+	90.0001%, 95% { background-position: center -198px; }
+	95.0001%, 100% { background-position: center -209px; }
+}
+
+/* - Have to repeat the rules for moz -*/
+
+@-moz-keyframes loadingBar {
+	0%, 5% { background-position: center top; }
+	5.0001%, 10% { background-position: center -11px; }
+	10.0001%, 15% { background-position: center -22px; }
+	15.0001%, 20% { background-position: center -33px; }
+	20.0001%, 25% { background-position: center -44px; }
+	25.0001%, 30% { background-position: center -55px; }
+	30.0001%, 35% { background-position: center -66px; }
+	35.0001%, 40% { background-position: center -77px; }
+	40.0001%, 45% { background-position: center -88px; }
+	45.0001%, 50% { background-position: center -99px; }
+	50.0001%, 55% { background-position: center -110px; }
+	55.0001%, 60% { background-position: center -121px; }
+	60.0001%, 65% { background-position: center -132px; }
+	65.0001%, 70% { background-position: center -143px; }
+	70.0001%, 75% { background-position: center -154px; }
+	75.0001%, 80% { background-position: center -165px; }
+	80.0001%, 85% { background-position: center -176px; }
+	85.0001%, 90% { background-position: center -187px; }
+	90.0001%, 95% { background-position: center -198px; }
+	95.0001%, 100% { background-position: center -209px; }
+}
+
+.loadingSpinner {
+	-webkit-animation: loadingSpinner 0.75s infinite;
+	-moz-animation: loadingSpinner 0.75s infinite;
+	background: #000 url(loadingSpinner.png) no-repeat center bottom;
+	border: 6px solid #000;
+	border-radius: 8px;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+	height: 42px;
+	margin: 3em auto 0 auto;
+	width: 42px;
+}
+
+@-webkit-keyframes loadingSpinner {
+	0%, 8.3% { background-position: center bottom; }
+	8.3001%, 16.6% { background-position: center -420px; } 
+	16.6001%, 24.9% { background-position: center -378px; }
+	24.9001%, 33.2% { background-position: center -336px; }
+	33.2001%, 41.6% { background-position: center -294px; }
+	41.6001%, 49.9% { background-position: center -252px; }
+	49.9001%, 58.3% { background-position: center -210px; }
+	58.3001%, 66.6% { background-position: center -168px; }
+	66.6001%, 75.9% { background-position: center -126px; }
+	75.9001%, 84.2% { background-position: center -84px; }
+	84.2001%, 92.5% { background-position: center -42px; }
+	92.5001%, 100% { background-position: center 0; }
+}
+
+@-moz-keyframes loadingSpinner {
+	0%, 8.3% { background-position: center bottom; }
+	8.3001%, 16.6% { background-position: center -420px; } 
+	16.6001%, 24.9% { background-position: center -378px; }
+	24.9001%, 33.2% { background-position: center -336px; }
+	33.2001%, 41.6% { background-position: center -294px; }
+	41.6001%, 49.9% { background-position: center -252px; }
+	49.9001%, 58.3% { background-position: center -210px; }
+	58.3001%, 66.6% { background-position: center -168px; }
+	66.6001%, 75.9% { background-position: center -126px; }
+	75.9001%, 84.2% { background-position: center -84px; }
+	84.2001%, 92.5% { background-position: center -42px; }
+	92.5001%, 100% { background-position: center 0; }
+}
+
+/* - General page styles -*/
+
+body {
+	background-color: #1f1f1f;
+	font-family: 'helvetica neue', helvetica, sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid #000;
+	box-shadow: rgba(255, 255, 255, 0.04) 0 1px 0;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0.4em 0 0.3em 0;
+	text-shadow: rgba(255, 255, 255, 0.09) 0 1px 0;
+	text-transform: uppercase;
+}
