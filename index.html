@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>	
+	<meta charset="utf-8">
+	<title>CSS Animated Sprites</title>
+	<style>
+		body {
+			background-color: #1f1f1f;
+			font-family: 'helvetica neue', helvetica, sans-serif;
+			font-size: 100%;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		
+		h1 {
+			background-color: rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid #000;
+			box-shadow: rgba(255, 255, 255, 0.04) 0 1px 0;
+			font-size: 1.5em;
+			margin: 0;
+			padding: 0.4em 0 0.3em 0;
+			text-shadow: rgba(255, 255, 255, 0.09) 0 1px 0;
+			text-transform: uppercase;
+		}
+		
+		.loadingBar {
+			background: #000 url(loadingBarSprite.png) no-repeat left top;
+			height: 11px;
+			margin: 3em auto 0 auto;
+			width: 92px;
+		}
+		
+		.loadingSpinner {
+			background: #000 url(loadingSpinnerSprite.png) no-repeat left top;
+			height: 42px;
+			margin: 3em auto 0 auto;
+			width: 42px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>CSS Animated Sprites</h1>
+	<div class="loadingBar"></div>
+	<div class="loadingSpinner"></div>
+</body>
+</html>
