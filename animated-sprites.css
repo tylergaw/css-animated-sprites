@@ -1,6 +1,7 @@
 .loadingBar {
-	-webkit-animation: loadingBar 1s infinite;
-	-moz-animation: loadingBar 1s infinite;
+    -moz-animation: loadingBar 1s steps(19, end) infinite;
+    -webkit-animation: loadingBar 1s steps(19, end) infinite;
+    animation: loadingBar 1s steps(19, end) infinite;
 	background: #000 url(loadingBar.png) no-repeat center top;
 	border-radius: 3px;
 	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
@@ -9,6 +10,142 @@
 	width: 92px;
 }
 
+@-moz-keyframes loadingBar {
+    from {
+        background-position: 50% 0;
+    }
+
+    to {
+        background-position: 50% -209px;
+    }
+}
+
+@-webkit-keyframes loadingBar {
+    from {
+        background-position: 50% 0;
+    }
+
+    to {
+        background-position: 50% -209px;
+    }
+}
+
+@keyframes loadingBar {
+    from {
+        background-position: 50% 0;
+    }
+
+    to {
+        background-position: 50% -209px;
+    }
+}
+
+/* It may be the way I have the image set up, but I can't get this to work
+    using the steps() method */
+.loadingSpinner {
+    -moz-animation: loadingSpinner 0.75s infinite;
+    -webkit-animation: loadingSpinner 0.75s infinite;
+    animation: loadingSpinner 0.75s infinite;
+    background: #000 url(loadingSpinner.png) no-repeat center bottom;
+    border: 6px solid #000;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+    height: 42px;
+    margin: 3em auto 0 auto;
+    width: 42px;
+}
+
+@-moz-keyframes loadingSpinner {
+    0%, 8.3% { background-position: center bottom; }
+    8.3001%, 16.6% { background-position: center -420px; }
+    16.6001%, 24.9% { background-position: center -378px; }
+    24.9001%, 33.2% { background-position: center -336px; }
+    33.2001%, 41.6% { background-position: center -294px; }
+    41.6001%, 49.9% { background-position: center -252px; }
+    49.9001%, 58.3% { background-position: center -210px; }
+    58.3001%, 66.6% { background-position: center -168px; }
+    66.6001%, 75.9% { background-position: center -126px; }
+    75.9001%, 84.2% { background-position: center -84px; }
+    84.2001%, 92.5% { background-position: center -42px; }
+    92.5001%, 100% { background-position: center 0; }
+}
+
+@-webkit-keyframes loadingSpinner {
+    0%, 8.3% { background-position: center bottom; }
+    8.3001%, 16.6% { background-position: center -420px; }
+    16.6001%, 24.9% { background-position: center -378px; }
+    24.9001%, 33.2% { background-position: center -336px; }
+    33.2001%, 41.6% { background-position: center -294px; }
+    41.6001%, 49.9% { background-position: center -252px; }
+    49.9001%, 58.3% { background-position: center -210px; }
+    58.3001%, 66.6% { background-position: center -168px; }
+    66.6001%, 75.9% { background-position: center -126px; }
+    75.9001%, 84.2% { background-position: center -84px; }
+    84.2001%, 92.5% { background-position: center -42px; }
+    92.5001%, 100% { background-position: center 0; }
+}
+
+@keyframes loadingSpinner {
+    0%, 8.3% { background-position: center bottom; }
+    8.3001%, 16.6% { background-position: center -420px; }
+    16.6001%, 24.9% { background-position: center -378px; }
+    24.9001%, 33.2% { background-position: center -336px; }
+    33.2001%, 41.6% { background-position: center -294px; }
+    41.6001%, 49.9% { background-position: center -252px; }
+    49.9001%, 58.3% { background-position: center -210px; }
+    58.3001%, 66.6% { background-position: center -168px; }
+    66.6001%, 75.9% { background-position: center -126px; }
+    75.9001%, 84.2% { background-position: center -84px; }
+    84.2001%, 92.5% { background-position: center -42px; }
+    92.5001%, 100% { background-position: center 0; }
+}
+
+.horse {
+    -moz-animation: horse 0.8s steps(15, end) infinite;
+    -webkit-animation: horse 0.8s steps(15, end) infinite;
+    animation: horse 0.8s steps(15, end) infinite;
+    background: #fff url(horse.jpg) no-repeat 0 0;
+    border: 4px solid #000;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+    margin: 3em auto 0 auto;
+    height: 134px;
+    width: 184px;
+}
+
+@-moz-keyframes horse {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -2760px 0;
+    }
+}
+
+@-webkit-keyframes horse {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -2760px 0;
+    }
+}
+
+@keyframes horse {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -2760px 0;
+    }
+}
+
+/*
+This is the first way I did these...did not know about steps(). I did find that
+not everything works with steps(). If you need steps that are not even the other
+method gives you more control
 @-webkit-keyframes loadingBar {
 	0%, 5% { background-position: center top; }
 	5.0001%, 10% { background-position: center -11px; }
@@ -31,8 +168,6 @@
 	90.0001%, 95% { background-position: center -198px; }
 	95.0001%, 100% { background-position: center -209px; }
 }
-
-/* - Have to repeat the rules for moz -*/
 
 @-moz-keyframes loadingBar {
 	0%, 5% { background-position: center top; }
@@ -57,96 +192,44 @@
 	95.0001%, 100% { background-position: center -209px; }
 }
 
-.loadingSpinner {
-	-webkit-animation: loadingSpinner 0.75s infinite;
-	-moz-animation: loadingSpinner 0.75s infinite;
-	background: #000 url(loadingSpinner.png) no-repeat center bottom;
-	border: 6px solid #000;
-	border-radius: 8px;
-	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
-	height: 42px;
-	margin: 3em auto 0 auto;
-	width: 42px;
-}
-
-@-webkit-keyframes loadingSpinner {
-	0%, 8.3% { background-position: center bottom; }
-	8.3001%, 16.6% { background-position: center -420px; } 
-	16.6001%, 24.9% { background-position: center -378px; }
-	24.9001%, 33.2% { background-position: center -336px; }
-	33.2001%, 41.6% { background-position: center -294px; }
-	41.6001%, 49.9% { background-position: center -252px; }
-	49.9001%, 58.3% { background-position: center -210px; }
-	58.3001%, 66.6% { background-position: center -168px; }
-	66.6001%, 75.9% { background-position: center -126px; }
-	75.9001%, 84.2% { background-position: center -84px; }
-	84.2001%, 92.5% { background-position: center -42px; }
-	92.5001%, 100% { background-position: center 0; }
-}
-
-@-moz-keyframes loadingSpinner {
-	0%, 8.3% { background-position: center bottom; }
-	8.3001%, 16.6% { background-position: center -420px; } 
-	16.6001%, 24.9% { background-position: center -378px; }
-	24.9001%, 33.2% { background-position: center -336px; }
-	33.2001%, 41.6% { background-position: center -294px; }
-	41.6001%, 49.9% { background-position: center -252px; }
-	49.9001%, 58.3% { background-position: center -210px; }
-	58.3001%, 66.6% { background-position: center -168px; }
-	66.6001%, 75.9% { background-position: center -126px; }
-	75.9001%, 84.2% { background-position: center -84px; }
-	84.2001%, 92.5% { background-position: center -42px; }
-	92.5001%, 100% { background-position: center 0; }
-}
-
-.horse {
-	-webkit-animation: horse 0.8s infinite;
-	-moz-animation: horse 1s infinite;
-	background: #fff url(horse.jpg) no-repeat 0 0;
-	border: 4px solid #000;
-	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
-	margin: 3em auto 0 auto;
-	height: 134px;
-	width: 184px;
-}
-
 @-webkit-keyframes horse {
-	0%, 6.25% { background-position: 0 0; }
-	6.2501%, 13% { background-position: -184px 0; }
-	13.0001%, 19.25% { background-position: -368px 0; }
-	19.2501%, 25.5% { background-position: -552px 0; }
-	25.5001%, 31.75% { background-position: -736px 0; }
-	31.7501%, 38% { background-position: -920px 0; }
-	38.0001%, 44.25% { background-position: -1104px 0; }
-	44.2501%, 50.5% { background-position: -1288px 0; }
-	50.5001%, 56.75% { background-position: -1472px 0; }
-	56.7501%, 63% { background-position: -1656px 0; }
-	63.0001%, 69.25% { background-position: -1840px 0; }
-	69.2501%, 75.5% { background-position: -2024px 0; }
-	75.5001%, 81.75% { background-position: -2208px 0; }
-	81.7501%, 88% { background-position: -2392px 0; }
-	88.0001%, 94.25% { background-position: -2576px 0; }
-	94.2501%, 100% { background-position: -2760px 0; }
+    0%, 6.25% { background-position: 0 0; }
+    6.2501%, 13% { background-position: -184px 0; }
+    13.0001%, 19.25% { background-position: -368px 0; }
+    19.2501%, 25.5% { background-position: -552px 0; }
+    25.5001%, 31.75% { background-position: -736px 0; }
+    31.7501%, 38% { background-position: -920px 0; }
+    38.0001%, 44.25% { background-position: -1104px 0; }
+    44.2501%, 50.5% { background-position: -1288px 0; }
+    50.5001%, 56.75% { background-position: -1472px 0; }
+    56.7501%, 63% { background-position: -1656px 0; }
+    63.0001%, 69.25% { background-position: -1840px 0; }
+    69.2501%, 75.5% { background-position: -2024px 0; }
+    75.5001%, 81.75% { background-position: -2208px 0; }
+    81.7501%, 88% { background-position: -2392px 0; }
+    88.0001%, 94.25% { background-position: -2576px 0; }
+    94.2501%, 100% { background-position: -2760px 0; }
 }
 
 @-moz-keyframes horse {
-	0%, 6.25% { background-position: 0 0; }
-	6.2501%, 13% { background-position: -184px 0; }
-	13.0001%, 19.25% { background-position: -368px 0; }
-	19.2501%, 25.5% { background-position: -552px 0; }
-	25.5001%, 31.75% { background-position: -736px 0; }
-	31.7501%, 38% { background-position: -920px 0; }
-	38.0001%, 44.25% { background-position: -1104px 0; }
-	44.2501%, 50.5% { background-position: -1288px 0; }
-	50.5001%, 56.75% { background-position: -1472px 0; }
-	56.7501%, 63% { background-position: -1656px 0; }
-	63.0001%, 69.25% { background-position: -1840px 0; }
-	69.2501%, 75.5% { background-position: -2024px 0; }
-	75.5001%, 81.75% { background-position: -2208px 0; }
-	81.7501%, 88% { background-position: -2392px 0; }
-	88.0001%, 94.25% { background-position: -2576px 0; }
-	94.2501%, 100% { background-position: -2760px 0; }
+    0%, 6.25% { background-position: 0 0; }
+    6.2501%, 13% { background-position: -184px 0; }
+    13.0001%, 19.25% { background-position: -368px 0; }
+    19.2501%, 25.5% { background-position: -552px 0; }
+    25.5001%, 31.75% { background-position: -736px 0; }
+    31.7501%, 38% { background-position: -920px 0; }
+    38.0001%, 44.25% { background-position: -1104px 0; }
+    44.2501%, 50.5% { background-position: -1288px 0; }
+    50.5001%, 56.75% { background-position: -1472px 0; }
+    56.7501%, 63% { background-position: -1656px 0; }
+    63.0001%, 69.25% { background-position: -1840px 0; }
+    69.2501%, 75.5% { background-position: -2024px 0; }
+    75.5001%, 81.75% { background-position: -2208px 0; }
+    81.7501%, 88% { background-position: -2392px 0; }
+    88.0001%, 94.25% { background-position: -2576px 0; }
+    94.2501%, 100% { background-position: -2760px 0; }
 }
+*/
 
 /* - General page styles -*/
 
@@ -178,14 +261,14 @@ p {
 }
 
 a {
-	
+
 	color: #f2f2f2;
 	display: inline-block;
 	font-size: 0.8em;
 	text-decoration: none;
 }
 
-	a:hover {
-		background-color: #f2f2f2;
-		color: #353535;
-	}
+a:hover {
+	background-color: #f2f2f2;
+	color: #353535;
+}
